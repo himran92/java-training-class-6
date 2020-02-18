@@ -7,7 +7,7 @@ cache:
 sudo: enabled
 git:
   depth: false
-install: false
+install: true
 before_script:
   - mvn versions:set -DnewVersion=${TRAVIS_BUILD_NUMBER}
 script:
