@@ -5,7 +5,8 @@ cache:
   directories:
     - "$HOME/.m2"
 sudo: enabled
-install: false
+install:
+  - echo "Nothing to install, but avoid default 'mvn install' command"
 git:
   depth: false
 before_script:
