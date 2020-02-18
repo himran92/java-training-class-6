@@ -5,9 +5,10 @@ cache:
   directories:
     - "$HOME/.m2"
 sudo: enabled
+install:
+  - echo "Nothing to install, but avoid default 'mvn install' command"
 git:
   depth: false
-install: true
 before_script:
   - mvn versions:set -DnewVersion=${TRAVIS_BUILD_NUMBER}
 script:
