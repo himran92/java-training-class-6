@@ -1,1 +1,18 @@
 language: java
+jdk:
+  - oraclejdk8
+cache:
+  directories:
+    - "$HOME/.m2"
+sudo: enabled
+git:
+  depth: false
+install: false
+before_script:
+  - mvn versions:set -DnewVersion=${TRAVIS_BUILD_NUMBER}
+script:
+  - mvn clean test package
+notifications:
+  email:
+    on_success: always
+    on_failure: always
